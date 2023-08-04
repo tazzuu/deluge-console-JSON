@@ -1,5 +1,11 @@
 # dcJSON
 
+Deluge console JSON output formatter.
+
+A JSON serializer for command line output from `deluge-console`, so you can more easily parse the status of your Deluge torrents from the cli. Designed for use with [`jq`](https://jqlang.github.io/jq/) to allow for easier filtering and formatting.
+
+Built with Go (Golang); https://go.dev/doc/install
+
 ## Usage
 
 start Deluge daemon process
@@ -28,6 +34,8 @@ $ deluge-console "info -d -v" | go run main.go | jq -r '.[] | .downloadFolder + 
 
 # Notes
 
+Quick notes for setting up and handling torrent downloads from the command line with Deluge.
+
 Download all .torrent files and load them
 
 ```
@@ -45,6 +53,4 @@ move a torrent
 
 ```
 $ deluge-console "move ubuntu-23.04-desktop-amd64.iso /home/username/Downloads"
-
-
 ```
