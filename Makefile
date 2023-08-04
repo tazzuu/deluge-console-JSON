@@ -12,7 +12,7 @@ format:
 	go fmt .
 
 run:
-	cat deluge-console-v-d.txt | go run main.go
+	cat test.txt | go run main.go
 
 NAME:=dcJSON
 build-all:
