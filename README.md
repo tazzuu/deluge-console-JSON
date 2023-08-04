@@ -49,6 +49,12 @@ $ for i in *.torrent; do deluge-console "add $i"; done
 
 ```
 
+save text output
+
+```
+deluge-console "info -d -v" > deluge-console-v-d.$(date '+%s').txt
+```
+
 move a torrent
 
 ```
